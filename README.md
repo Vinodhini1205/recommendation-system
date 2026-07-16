@@ -7,8 +7,6 @@ A content-based movie recommendation engine built with Python and scikit-learn, 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange?logo=scikitlearn)
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas)
-![License](https://img.shields.io/badge/License-MIT-green)
-
 </div>
 
 ---
@@ -159,12 +157,6 @@ movie-recommendation-system/
 - Build a hybrid recommender combining content-based and collaborative approaches
 - Add movie tags, cast, and crew as additional similarity features
 - Deploy as an interactive Streamlit / Flask web app
-
----
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
