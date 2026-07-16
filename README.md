@@ -1,4 +1,4 @@
-# 🎬 Movie Recommendation System
+# Movie Recommendation System
 
 A content-based movie recommendation engine built with Python and scikit-learn, using the MovieLens dataset. The system analyzes movie genres and user rating patterns to suggest similar movies, along with a full exploratory data analysis of viewing and rating trends.
 
@@ -13,7 +13,7 @@ A content-based movie recommendation engine built with Python and scikit-learn, 
 
 ---
 
-## 📖 Overview
+## Overview
 
 With the explosion of streaming platforms, recommendation systems have become essential for helping users discover content they'll actually enjoy. This project builds a **content-based movie recommendation system** using the MovieLens dataset, which contains movie metadata, genres, user ratings, and timestamps.
 
@@ -28,20 +28,20 @@ The core idea: movies are recommended based on how similar their **genres** are 
 
 ---
 
-## 📂 Dataset
+## Dataset
 
 This project uses the **MovieLens dataset**, consisting of two files:
 
 | File | Description |
 |---|---|
 | `movies.csv` | Movie ID, title (with release year), and pipe-separated genres |
-| `ratings.csv` | User ID, movie ID, rating (0.5–5.0), and timestamp |
+| `ratings.csv` | User ID, movie ID, rating (0.5-5.0), and timestamp |
 
 > Dataset source: [MovieLens Dataset on Kaggle](https://www.kaggle.com/datasets/parasharmanas/movie-recommendation-system)
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Library | Purpose |
 |---|---|
@@ -52,34 +52,34 @@ This project uses the **MovieLens dataset**, consisting of two files:
 
 ---
 
-## 🧹 Data Preprocessing
+## Data Preprocessing
 
 - Checked and handled missing values (empty genre fields filled with `''`)
 - Checked for duplicate records in both datasets
 - Merged `ratings.csv` and `movies.csv` on `movieId` for combined analysis
-- Extracted release **year** from movie titles using regex
+- Extracted release year from movie titles using regex
 
 ---
 
-## 📊 Exploratory Data Analysis
+## Exploratory Data Analysis
 
 The notebook explores:
 
-- ⭐ **Top rated movies** — average rating per title
-- 🔥 **Most popular movies** — number of ratings per title
-- 📈 **Rating distribution** — histogram of all ratings
-- 🎭 **Genre distribution** — frequency of each genre across the catalog
-- 📉 **Movies released per year** — trend of movie releases over time
-- 🧊 **User–movie ratings heatmap** — rating patterns across top active users and top rated movies
+- **Top rated movies** - average rating per title
+- **Most popular movies** - number of ratings per title
+- **Rating distribution** - histogram of all ratings
+- **Genre distribution** - frequency of each genre across the catalog
+- **Movies released per year** - trend of movie releases over time
+- **User-movie ratings heatmap** - rating patterns across top active users and top rated movies
 
 ---
 
-## 🤖 Recommendation Model
+## Recommendation Model
 
 **Approach:** Content-Based Filtering on movie genres
 
 1. Genres are vectorized using `TfidfVectorizer` (split on `|`)
-2. A `NearestNeighbors` model is fit on the TF-IDF matrix using **cosine distance**
+2. A `NearestNeighbors` model is fit on the TF-IDF matrix using cosine distance
 3. Given a movie title, the model retrieves the 10 nearest movies in genre space
 
 ```python
@@ -104,7 +104,7 @@ def recommend(movie_name):
 ```
 recommend("Toy Story (1995)")
 
-🎬 Recommended Movies for 'Toy Story (1995)'
+Recommended Movies for 'Toy Story (1995)'
 
 Antz (1998)
 Toy Story 2 (1999)
@@ -115,7 +115,7 @@ Emperor's New Groove, The (2000)
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 ```bash
@@ -140,35 +140,35 @@ pip install pandas numpy matplotlib seaborn scikit-learn
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 movie-recommendation-system/
-│
-├── movie-recommendation-system.ipynb   # Main notebook (EDA + model)
-├── movies.csv                          # Movie metadata (not included, download separately)
-├── ratings.csv                         # User ratings (not included, download separately)
-└── README.md                           # Project documentation
+|
+|-- movie-recommendation-system.ipynb   # Main notebook (EDA + model)
+|-- movies.csv                          # Movie metadata (not included, download separately)
+|-- ratings.csv                         # User ratings (not included, download separately)
+|-- README.md                           # Project documentation
 ```
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvements
 
-- Incorporate **collaborative filtering** using user rating history
-- Build a **hybrid recommender** combining content-based and collaborative approaches
-- Add movie **tags, cast, and crew** as additional similarity features
-- Deploy as an interactive **Streamlit / Flask web app**
+- Incorporate collaborative filtering using user rating history
+- Build a hybrid recommender combining content-based and collaborative approaches
+- Add movie tags, cast, and crew as additional similarity features
+- Deploy as an interactive Streamlit / Flask web app
 
 ---
 
-## 📄 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-## 🙌 Acknowledgements
+## Acknowledgements
 
 - [MovieLens](https://grouplens.org/datasets/movielens/) for the dataset
 - [scikit-learn](https://scikit-learn.org/) documentation for modeling reference
